@@ -1,0 +1,23 @@
+<div class="container">
+    <ng-container *ngIf="connected; else offline">
+        <form *ngIf="rubric; else loading" id="rubric">
+            <rc-edit-rubric-header></rc-edit-rubric-header>
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped" aria-label="Create Rubric Components and Levels">
+                        <thead rc-rubric-table-head></thead>
+                        <tbody rc-edit-rubric-table-body></tbody>
+                    </table>
+                </div>
+            </div>
+            <rc-edit-rubric-table-bottom></rc-edit-rubric-table-bottom>
+            <rc-edit-rubric-save-button></rc-edit-rubric-save-button>
+        </form>
+    </ng-container>
+    <ng-template #offline>
+        <rc-offline></rc-offline>
+    </ng-template>
+    <ng-template #loading>
+        <rc-loading></rc-loading>
+    </ng-template>
+</div>

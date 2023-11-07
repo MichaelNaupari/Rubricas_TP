@@ -1,0 +1,40 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="'/rubrics'" (click)="navbarCollapsed = true">
+        <img width="30" height="30" src="/assets/pencil.png" alt="rubricas urp">
+        Creador de Rubricas
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            (click)="navbarCollapsed = !navbarCollapsed"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link"
+                   (click)="navbarCollapsed = true"
+                   [routerLinkActive]="'active'"
+                   [routerLinkActiveOptions]="{exact: true}"
+                   [routerLink]="'/'">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   (click)="navbarCollapsed = true"
+                   [routerLinkActive]="'active'"
+                   [routerLinkActiveOptions]="{exact: true}"
+                   [routerLink]="'/rubrics'">Rubricas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   (click)="navbarCollapsed = true"
+                   [routerLinkActive]="'active'"
+                   [routerLinkActiveOptions]="{exact: true}"
+                   [routerLink]="'/rubrics/create'">Crear</a>
+            </li>
+        </ul>
+    </div>
+</nav>

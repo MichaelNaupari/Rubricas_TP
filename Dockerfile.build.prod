@@ -1,0 +1,19 @@
+# Angular base image
+FROM teracy/angular-cli:6.2
+WORKDIR /angular
+
+# Install packages
+COPY ./package.json /angular/package.json
+COPY ./package-lock.json /angular/package-lock.json
+RUN npm install --silent
+
+# Add code
+COPY ./ /angular
+
+# Run the build process
+ARG deploy_url=https://www.rubriccreator.com/
+RUN ng build --prod --aot true --deploy-url $deploy_url
+
+# Next stage: Azure CLI
+FROM mcr.microsoft.com/azure-cli
+COPY --from=0 /angular/dist /dist

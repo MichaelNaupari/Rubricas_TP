@@ -1,0 +1,26 @@
+<div class="container">
+    <div *ngIf="rubric; else loading" id="rubric">
+        <rc-rubric-header></rc-rubric-header>
+        <div class="row d-none d-md-block">
+            <div class="table-responsive d-print-none">
+                <table class="table table-striped">
+                    <thead rc-rubric-table-head></thead>
+                    <tbody rc-rubric-table-body></tbody>
+                </table>
+            </div>
+
+            <table class="d-none d-print-block">
+                <thead rc-rubric-table-head></thead>
+                <tbody rc-rubric-table-body [responsive]="false"></tbody>
+            </table>
+        </div>
+        <div class="row d-md-none">
+            <div class="col">
+                <rc-rubric-view-mobile></rc-rubric-view-mobile>
+            </div>
+        </div>
+    </div>
+    <ng-template #loading>
+        <rc-loading></rc-loading>
+    </ng-template>
+</div>
