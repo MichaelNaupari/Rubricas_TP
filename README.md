@@ -1,15 +1,4 @@
-# Rubric Creator by [Marco Learning](https://marcolearning.com/)
 
-Create and share scoring rubrics for grading papers. Made for educators by [Marco Learning](https://marcolearning.com/) and available for free at [rubriccreator.com](https://www.rubriccreator.com).
-
-[![Codeship Status for thegraidenetwork/rubric-creator](https://app.codeship.com/projects/95a16760-27a5-0136-f837-6ef2b9ae3ded/status?branch=master)](https://app.codeship.com/projects/287071) [![Coverage Status](https://coveralls.io/repos/github/thegraidenetwork/rubric-creator/badge.svg?branch=master)](https://coveralls.io/github/thegraidenetwork/rubric-creator?branch=master)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Latest tagged release](https://img.shields.io/github/tag/thegraidenetwork/rubric-creator.svg)](https://img.shields.io/github/tag/thegraidenetwork/rubric-creator.svg)
-
-![](https://i.imgur.com/Q6xO1eV.gif)
-
-## Development
-
-While this product is freely available on the web, you may also want to customize it or submit improvements. The guide below should help you get started.
 
 ### Prerequisites
 - Node 7.0+
@@ -17,7 +6,7 @@ While this product is freely available on the web, you may also want to customiz
 
 ### Installation
 
-- Clone this repository: `git clone git@github.com:thegraidenetwork/rubric-creator.git`
+- Clone this repository:
 - Install npm dependencies: `npm install`
 - Run the development server: `ng serve`
 
@@ -48,11 +37,6 @@ Run `npm run lint` to execute the linter via [TSLint](https://palantir.github.io
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build and the `--aot` flag for ahead-of-time compilation (recommended).
 
-## Contributing
-
-Contributions are welcome and encouraged to this open source project. Please be sure to [submit an issue on Github](https://github.com/thegraidenetwork/rubric-creator/issues) to solicit discussion before jumping in as someone else might be working on the same thing.
-
-Also be sure to read and adhere to our [code of conduct](/CODE_OF_CONDUCT.md).
 
 ## Deploying
 
@@ -72,18 +56,4 @@ This project was built on the back of many great open source projects. Here are 
 - [Bootstrap](https://getbootstrap.com/)
 - [iconic icons](https://useiconic.com/open/)
 
-## License
 
-Copyright 2020, [Marco Learning](https://marcolearning.com/)
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
