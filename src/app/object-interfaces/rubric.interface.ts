@@ -10,3 +10,4 @@ export interface RubricInterface {
     totalPoints?: number;
     uuid?: string;
 }
+

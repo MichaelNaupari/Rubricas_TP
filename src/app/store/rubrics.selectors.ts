@@ -8,9 +8,11 @@ export const selectConnected = state => state.rubrics.connected;
 
 export const selectFilteredRubrics = state => {
     return state.rubrics.allRubrics.filter(rubric => {
+        console.log(rubric);
+        const rubricRecord = rubric.name ? rubric : rubric.record;
         return (
-            rubric.name.toLowerCase().includes(state.rubrics.listFilter.toLowerCase()) ||
-            rubric.description.toLowerCase().includes(state.rubrics.listFilter.toLowerCase())
+            rubricRecord.name.toLowerCase().includes(state.rubrics.listFilter.toLowerCase()) ||
+            rubricRecord.description.toLowerCase().includes(state.rubrics.listFilter.toLowerCase())
         );
     });
 };

@@ -20,7 +20,7 @@ export function getInitialState(): {rubrics: RubricsStateInterface} {
             error: undefined,
             saving: false,
             deleting: false,
-            pageTitle: 'Rubric Creator by The Graide Network',
+            pageTitle: 'Rubricas TP',
             connected: true,
             listFilter: '',
         },

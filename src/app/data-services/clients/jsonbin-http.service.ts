@@ -11,12 +11,13 @@ import { environment } from '../../../environments/environment';
 export class JsonbinHttpService implements GetRubricDataInterface {
     private readonly rootUrl = 'https://api.jsonbin.io/v3';
     private readonly headers = {
-        // 'collection-id': environment.jsonbinCollectionId,
+        'X-Collection-Id' : '654935ee12a5d3765995bffc',
          private: 'false',
         // 'secret-key': environment.jsonbinSecretKey,
         'Content-Type' : 'application/json',
         'X-Master-Key' : '$2a$10$9mfCs5/OSNPd8lzieGRjZOcsmU6NF042dxdshwiVPYqeEZGjyI6wG',
-        // 'X-Key-Name' : 'MI PRUEBA'
+       
+        
     };
 
     constructor(private http: HttpClient) { }
@@ -24,13 +25,20 @@ export class JsonbinHttpService implements GetRubricDataInterface {
     public getRubric(uuid: string): Observable<RubricInterface> {
         return this.get(`${this.rootUrl}/b/${uuid}`).pipe(
             // Set the rubric's uuid from the request
-            map((result: RubricInterface) => ({ ...result, uuid })));
+            map((result: JsonbinCreateResponseInterface) => {
+                console.log(result);
+                return { ...result.record, uuid: result.metadata.id }
+            }));
     }
 
     public createRubric(rubric: RubricInterface): Observable<RubricInterface> {
-        return this.post(`${this.rootUrl}/b`, rubric).pipe(
+        console.log('entre');
+        return this.post(`${this.rootUrl}/b/`, rubric).pipe(
             // Set the rubric's uuid from the response
-            map((result: JsonbinCreateResponseInterface) => ({ ...result.data, uuid: result.id })));
+            map((result: JsonbinCreateResponseInterface) => {
+                console.log(result);
+                return { ...result.record, uuid: result.metadata.id }
+            }));
     }
 
     private get(url: string): Observable<object> {

@@ -1,7 +1,7 @@
 import { RubricInterface } from '../../object-interfaces/rubric.interface';
 
 export const defaultRubricsArray: Array<RubricInterface> = [
-  
+
 ];
 
 export const defaultRubricIds = defaultRubricsArray.reduce(

@@ -9,6 +9,6 @@ services:
     encrypted_env_file: .env.encrypted
     args:
       # Replace with your Deploy URL
-      deploy_url: https://www.rubriccreator.com/
+      deploy_url: https://www.rubricaURP.com/
     volumes:
       - ./docker:/docker

@@ -13,7 +13,7 @@ export class RubricActionButtonGroupComponent {
     @Input() public rubric: RubricInterface;
     @Input() public showPrint: boolean = false;
     public copied: boolean = false;
-    private baseUrl: string = 'https://www.rubriccreator.com';
+    private baseUrl: string = 'https://www.rubricaURP.com';
 
     constructor(private modalService: NgbModal) {}
 

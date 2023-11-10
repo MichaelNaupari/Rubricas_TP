@@ -8,7 +8,7 @@ import { SetPageTitle } from '../../store/rubrics.actions';
     templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-    private title: string = 'Rubric Creator by The Graide Network';
+    private title: string = 'Rubricas FI';
 
     constructor(private store: Store<RubricsStateInterface>) {}
 
