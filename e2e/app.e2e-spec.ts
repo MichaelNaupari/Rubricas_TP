@@ -7,7 +7,7 @@ describe('rubric-creator App', () => {
         void browser.get('/');
 
         const header = element(by.css('rc-root h1'));
-        void expect(header.getText()).toEqual('Rubric Creator');
+        void expect(header.getText()).toEqual('Rubrica URP');
     });
 
     it('should display default rubrics on rubrics page', () => {

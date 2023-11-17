@@ -8,7 +8,7 @@ import { SetPageTitle } from '../../store/rubrics.actions';
     templateUrl: './page-not-found.component.html',
 })
 export class PageNotFoundComponent implements OnInit {
-    private title: string = 'Page Not Found | Rubric Creator';
+    private title: string = 'Page Not Found | Rubrica URP';
 
     constructor(private store: Store<RubricsStateInterface>) {}
 

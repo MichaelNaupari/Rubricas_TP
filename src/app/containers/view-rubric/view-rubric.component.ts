@@ -31,7 +31,7 @@ export class ViewRubricComponent extends BaseRubricComponent implements OnInit {
             this.store.pipe(
                 select(selectCurrentRubric),
                 map(currentRubric => currentRubric !== undefined ?
-                    `${currentRubric.name} | Rubric Creator` :
+                    `${currentRubric.name} | Rubrica URP` :
                     getInitialState().rubrics.pageTitle)
             ),
             this.store.pipe(select(selectPageTitle)),

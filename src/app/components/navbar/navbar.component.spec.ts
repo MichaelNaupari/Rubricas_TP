@@ -38,6 +38,6 @@ describe('NavbarComponent', () => {
 
     it('should show site title in navbar', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('a.navbar-brand').textContent).toContain('Rubric Creator');
+        expect(compiled.querySelector('a.navbar-brand').textContent).toContain('Rubrica URP');
     });
 });

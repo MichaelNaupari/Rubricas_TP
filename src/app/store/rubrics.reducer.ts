@@ -5,6 +5,7 @@ import { getTotalPointsFromRubric } from '../functions/get-total-points-from-rub
 import { RubricInterface } from '../object-interfaces/rubric.interface';
 
 function _resetRubric(rubric: RubricInterface | undefined): RubricInterface | undefined {
+   
     return (rubric !== undefined) ? {
         ...rubric,
         maxLevelsCount: getMaxLevelsFromRubric(rubric),

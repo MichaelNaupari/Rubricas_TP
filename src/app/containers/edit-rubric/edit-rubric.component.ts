@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: './edit-rubric.component.html',
 })
 export class EditRubricComponent extends BaseRubricComponent implements OnInit {
-    private title: string = 'Create New Rubric | Rubric Creator';
+    private title: string = 'Crea nueva rubrica | Rubrica URP';
 
     constructor(
         protected store: Store<RubricsStateInterface>,

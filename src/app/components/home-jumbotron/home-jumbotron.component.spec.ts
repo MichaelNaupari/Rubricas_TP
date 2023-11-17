@@ -30,6 +30,6 @@ describe('HomeJumbotronComponent', () => {
 
     it('should show page title in header tag', () => {
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('h1.display-4').textContent).toBe('Rubric Creator');
+        expect(compiled.querySelector('h1.display-4').textContent).toBe('Rubrica URP');
     });
 });
